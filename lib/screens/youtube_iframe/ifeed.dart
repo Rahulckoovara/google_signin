@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_signinn/custom/custom_strings.dart';
 import 'package:google_signinn/screens/youtube_iframe/player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
@@ -90,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Play YT Video'),
+        title: const Text(CustomStrings.youtubeiframeTitle),
       ),
       body: ListView.builder(
         itemCount: videos.length,

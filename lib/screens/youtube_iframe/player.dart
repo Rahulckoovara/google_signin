@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_signinn/custom/custom_strings.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class PlayerScreen extends StatefulWidget {
@@ -44,9 +45,8 @@ class _PlayerScreenState extends State<PlayerScreen> {
     }
 
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('YouTube Player'),
-        ),
+        appBar:
+            AppBar(title: const Text(CustomStrings.youtubeiframePlayerTitle)),
         body: YoutubePlayerScaffold(
           builder: (ctx, player) => SingleChildScrollView(
             child: Column(

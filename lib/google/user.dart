@@ -25,7 +25,6 @@ class UserDetails extends StatelessWidget {
       body: Center(
         child: Container(
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('PROFILE'),
