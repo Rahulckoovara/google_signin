@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_signinn/home.dart';
+import 'package:google_signinn/google/sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: home1(),
+      home: SignUpPage(),
     );
   }
 }

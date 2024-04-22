@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_signinn/custom/custom_color.dart';
+import 'package:google_signinn/custom/custom_strings.dart';
 import 'package:google_signinn/google/api/google_api.dart';
-import 'package:google_signinn/google/user.dart';
+import 'package:google_signinn/home.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -11,35 +13,36 @@ class SignUpPage extends StatelessWidget {
       final user = await GoogleSignInApi.login();
       if (user == null) {
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Sign in failed. Please try again.')));
+            const SnackBar(content: Text(CustomStrings.signInFailed)));
       }
-      Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => UserDetails(user: user!)));
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => home1(user: user!)));
     }
 
     return SafeArea(
       child: Scaffold(
         body: Container(
           width: double.infinity,
-          color: Colors.grey[800],
+          color: CustomColor.greyColor,
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Hi \nWelcome Back',
+                const Text(
+                  CustomStrings.welcomeLabel,
                   style: TextStyle(
-                      color: Colors.white,
+                      color: CustomColor.primaryColor,
                       fontSize: 30,
                       fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  ' Login to your account to continue',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                const Text(
+                  CustomStrings.loginLabel,
+                  style: const TextStyle(
+                      color: CustomColor.primaryColor, fontSize: 15),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Container(
@@ -57,12 +60,12 @@ class SignUpPage extends StatelessWidget {
                             'assets/google.png',
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Text(
-                          'Sign Up with Google',
-                          style: TextStyle(color: Colors.black),
+                        const Text(
+                          CustomStrings.buttonLabel,
+                          style: TextStyle(color: CustomColor.secondaryColor),
                         ),
                       ],
                     ),
@@ -73,7 +76,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
               ],

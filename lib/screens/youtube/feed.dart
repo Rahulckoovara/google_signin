@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_signinn/custom/custom_strings.dart';
 import 'package:google_signinn/screens/youtube/video_list.dart';
 
 final List<Map<String, dynamic>> videos = [
@@ -94,7 +95,7 @@ class _FeedState extends State<Feed> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Youtubee")),
+      appBar: AppBar(title: const Text(CustomStrings.youtubeTitle)),
       body: ListView.builder(
         controller: _scrollController,
         itemCount: videos.length,
