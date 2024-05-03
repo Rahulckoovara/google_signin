@@ -17,3 +17,6 @@ youtube_player_iframe: ^5.1.2
 ·	Youtube player that consists the same features as youtube such as sound adjustment, quality adjustment ,share button etc.
 ·	Supports Fullscreen Gestures(Swipe up/down to enter/exit fullscreen mode)
 ·	
+
+Visibility detector:
+-plugin used to fetch the action that should be performed when the widget is in the particular viewport.And the video that comes inside the viewport only should be played.
