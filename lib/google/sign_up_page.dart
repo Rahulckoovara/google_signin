@@ -39,7 +39,7 @@ class SignUpPage extends StatelessWidget {
                 ),
                 const Text(
                   CustomStrings.loginLabel,
-                  style: const TextStyle(
+                  style:  TextStyle(
                       color: CustomColor.primaryColor, fontSize: 15),
                 ),
                 const SizedBox(
@@ -50,6 +50,11 @@ class SignUpPage extends StatelessWidget {
                   height: 50,
                   child: ElevatedButton(
                     onPressed: SignIn,
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -68,11 +73,6 @@ class SignUpPage extends StatelessWidget {
                           style: TextStyle(color: CustomColor.secondaryColor),
                         ),
                       ],
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(2),
-                      ),
                     ),
                   ),
                 ),
