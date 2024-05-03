@@ -22,15 +22,15 @@ class home1 extends StatelessWidget {
               children: [
                 CircleAvatar(
                     radius: 15, backgroundImage: NetworkImage(user.photoUrl!)),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 TextButton.icon(
                     onPressed: () async {
                       await GoogleSignInApi.logout();
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => SignUpPage()));
+                          builder: (context) => const SignUpPage()));
                     },
-                    icon: Icon(Icons.logout_outlined),
-                    label: Text(CustomStrings.logoutTitle)),
+                    icon: const Icon(Icons.logout_outlined),
+                    label: const Text(CustomStrings.logoutTitle)),
               ],
             ),
           ],
@@ -38,6 +38,7 @@ class home1 extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
+
               ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(

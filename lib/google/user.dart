@@ -15,36 +15,35 @@ class UserDetails extends StatelessWidget {
           TextButton.icon(
               onPressed: () async {
                 await GoogleSignInApi.logout();
+                // ignore: use_build_context_synchronously
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => SignUpPage()));
+                    MaterialPageRoute(builder: (context) => const SignUpPage()));
               },
-              icon: Icon(Icons.logout_outlined),
-              label: Text('logout'))
+              icon: const Icon(Icons.logout_outlined),
+              label: const Text('logout'))
         ],
       ),
       body: Center(
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('PROFILE'),
-              SizedBox(
-                height: 30,
-              ),
-              CircleAvatar(
-                radius: 20,
-                backgroundImage: NetworkImage(user.photoUrl!),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text('Name: ${user.displayName}'),
-              SizedBox(
-                height: 30,
-              ),
-              Text('Email: ${user.email}'),
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('PROFILE'),
+            const SizedBox(
+              height: 30,
+            ),
+            CircleAvatar(
+              radius: 20,
+              backgroundImage: NetworkImage(user.photoUrl!),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Text('Name: ${user.displayName}'),
+            const SizedBox(
+              height: 30,
+            ),
+            Text('Email: ${user.email}'),
+          ],
         ),
       ),
     );
